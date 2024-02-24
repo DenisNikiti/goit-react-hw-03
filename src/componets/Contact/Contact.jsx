@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
-import css from "./ContactItem.module.css";
-export default function ContactItem({
-  contact: { name, number, id },
-  onDelete,
-}) {
+import css from "./Contact.module.css";
+export default function Contact({ contact: { name, number, id }, onDelete }) {
   return (
     <li className={css.listItem}>
       <div>
@@ -26,7 +23,7 @@ export default function ContactItem({
   );
 }
 
-ContactItem.propTypes = {
+Contact.propTypes = {
   contact: PropTypes.object.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
